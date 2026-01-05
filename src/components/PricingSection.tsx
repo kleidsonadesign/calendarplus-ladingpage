@@ -44,8 +44,8 @@ export function PricingSection() {
       badge: 'Mais Popular',
     },
     {
-      name: 'Unlimited',
-      price: 'R$ 297,00',
+      name: 'Personalizado',
+      price: 'A Combinar',
       period: '/mês',
       description: 'Para Grandes Clínicas',
       subtitle: 'Operações em escala',
