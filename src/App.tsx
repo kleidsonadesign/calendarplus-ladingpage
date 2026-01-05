@@ -21,38 +21,40 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
       
-      {/* HEADER AUMENTADO */}
-      {/* Alterado 'py-3' para 'py-6' para deixar a barra mais alta */}
-      <header className="border-b bg-white/95 backdrop-blur-md sticky top-0 z-50 shadow-sm transition-all duration-300">
-        <div className="container mx-auto px-6 py-6 flex items-center justify-between max-w-7xl">
+      {/* HEADER CORRIGIDO */}
+      {/* 1. Removi 'backdrop-blur' e a transparência. Agora é 'bg-white' puro (Sólido) */}
+      <header className="border-b bg-white sticky top-0 z-50 shadow-md transition-all">
+        <div className="container mx-auto px-6 py-4 flex items-center justify-between max-w-7xl">
           
-          {/* 1. Lado Esquerdo - Logo Korven (Maior e com mais espaço) */}
-          {/* Aumentei a div de 'w-24' para 'w-40' para caber a logo maior */}
-          <div className="w-40 flex items-center justify-start">
+          {/* 2. Lado Esquerdo - Logo Korven AUMENTADA */}
+          {/* Aumentei o container para w-60 para caber a logo grande sem espremer */}
+          <div className="w-60 flex items-center justify-start">
              <img 
                src={korvenLogo} 
                alt="Desenvolvido por Korven" 
-               // Aumentei de 'h-8' para 'h-12'
-               className="h-12 w-auto object-contain hover:opacity-80 transition-opacity cursor-pointer" 
+               // Mudei para 'h-16' (64px). Se ainda achar pequeno, mude para 'h-20'.
+               className="h-16 w-auto object-contain cursor-pointer hover:opacity-90 transition-opacity" 
              />
           </div>
           
           {/* Lado Central - Logo Calendar Plus */}
+          {/* Mantida centralizada com posição absoluta */}
           <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-3">
-            <img src={logo} alt="Calendar Plus" className="w-14 h-14" />
-            <span className="text-2xl font-bold text-slate-800 tracking-tight">Calendar Plus</span>
+            <img src={logo} alt="Calendar Plus" className="w-12 h-12" />
+            <span className="text-xl font-bold text-slate-800 tracking-tight hidden md:block">Calendar Plus</span>
           </div>
           
-          {/* 2. Lado Direito - Botão de Login (Alinhado com a nova altura) */}
-          <div className="w-40 flex justify-end">
+          {/* Lado Direito - Botão de Login */}
+          {/* O container tem a mesma largura (w-60) do lado esquerdo para manter o centro perfeito */}
+          <div className="w-60 flex justify-end">
             <a 
               href="https://calendarplus-login.vercel.app/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="
-                group relative px-8 py-3 rounded-full 
-                bg-slate-900 text-white text-base font-semibold 
-                shadow-xl hover:shadow-slate-900/40 hover:-translate-y-1
+                group relative px-8 py-2.5 rounded-full 
+                bg-slate-900 text-white text-sm font-semibold 
+                shadow-lg hover:shadow-slate-900/40 hover:-translate-y-0.5
                 transition-all duration-300 ease-in-out
                 overflow-hidden
               "
