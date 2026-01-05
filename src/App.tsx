@@ -33,7 +33,7 @@ export default function App() {
                src={korvenLogo} 
                alt="Desenvolvido por Korven" 
                // Mudei para 'h-16' (64px). Se ainda achar pequeno, mude para 'h-20'.
-               className="h-16 w-auto object-contain cursor-pointer hover:opacity-90 transition-opacity" 
+               className="w-18 h-18" 
              />
           </div>
           
@@ -106,7 +106,7 @@ export default function App() {
             </div>
           </div>
           <div className="border-t border-slate-800 mt-8 pt-8 text-sm text-center">
-            © {new Date().getFullYear()} Calendar Plus. Todos os direitos reservados.
+            © {new Date().getFullYear()} Korven Lab. Todos os direitos reservados.
           </div>
         </div>
       </footer>
