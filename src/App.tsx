@@ -21,41 +21,40 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
       
-      {/* HEADER */}
-      <header className="border-b bg-white sticky top-0 z-50 shadow-sm">
-        {/* Aumentei o padding vertical (py-6) para o header ficar mais alto e comportar a logo grande */}
-        <div className="container mx-auto px-6 py-6 flex items-center justify-between max-w-7xl relative">
+      {/* HEADER OTIMIZADO */}
+      {/* Reduzi o padding para 'py-2'. A barra vai ficar da altura exata da logo, sem sobras. */}
+      <header className="border-b bg-white sticky top-0 z-50 shadow-sm transition-all">
+        <div className="container mx-auto px-6 py-2 flex items-center justify-between max-w-7xl relative">
           
-          {/* 1. Lado Esquerdo - Logo Korven (DOBRO DO TAMANHO) */}
-          {/* Mudei 'w-64' para 'w-96' para dar bastante espaço lateral */}
-          <div className="w-96 flex items-center justify-start">
+          {/* 1. Lado Esquerdo - Logo Korven */}
+          {/* Usei 'w-80' para garantir espaço, mas sem exagerar */}
+          <div className="w-80 flex items-center justify-start">
              <img 
                src={korvenLogo} 
                alt="Desenvolvido por Korven" 
-               // Mudei para 'h-24' (aprox. 96px). Adicionei 'md:h-24' para garantir que no desktop fique grande.
-               // No celular mantive 'h-16' para não ocupar a tela toda.
-               className="h-16 md:h-24 w-auto object-contain cursor-pointer hover:opacity-80 transition-opacity" 
+               // AJUSTE CRÍTICO: 'h-20' (80px) é bem grande, mas removendo o padding da barra, fica equilibrado.
+               // No mobile, reduzi para 'h-14' para não estourar a tela do celular.
+               className="h-14 md:h-20 w-auto object-contain cursor-pointer hover:opacity-80 transition-opacity" 
              />
           </div>
           
           {/* 2. Lado Central - Logo Calendar Plus */}
-          {/* O alinhamento 'top-1/2' garante que ela continue centralizada mesmo com o header mais alto */}
+          {/* Centralização absoluta */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-3">
-            <img src={logo} alt="Calendar Plus" className="w-12 h-12" />
+            <img src={logo} alt="Calendar Plus" className="w-10 h-10 md:w-12 md:h-12" />
             <span className="text-xl font-bold text-slate-800 tracking-tight hidden lg:block">
               Calendar Plus
             </span>
           </div>
           
           {/* 3. Lado Direito - Botão de Login */}
-          {/* Mantive w-96 para equilibrar com o lado esquerdo */}
-          <div className="w-96 flex justify-end">
+          <div className="w-80 flex justify-end">
             <a 
               href="https://calendarplus-login.vercel.app/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="
-                group relative px-8 py-3 rounded-full 
+                group relative px-6 py-2 rounded-full 
                 bg-slate-900 text-white text-sm font-semibold 
                 shadow-md hover:shadow-lg hover:-translate-y-0.5
                 transition-all duration-300 ease-in-out
