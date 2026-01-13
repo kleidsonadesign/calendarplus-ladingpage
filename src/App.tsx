@@ -1,4 +1,4 @@
-
+import { HeroSection } from './components/HeroSection';
 import { BenefitSection } from './components/BenefitSection';
 import { WhatsAppSection } from './components/WhatsAppSection';
 import { PricingSection } from './components/PricingSection';
