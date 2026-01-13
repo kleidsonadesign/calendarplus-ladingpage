@@ -1,5 +1,3 @@
-import { Button } from './ui/button';
-
 export function HeroSection() {
   return (
     <section className="relative bg-slate-50 border-b border-slate-200 overflow-hidden pt-20 pb-28 md:pt-32 md:pb-40">
@@ -32,32 +30,14 @@ export function HeroSection() {
           </h1>
 
           {/* Subtítulo */}
-          <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl leading-relaxed">
+          {/* Aumentei a margem inferior (mb-16) para dar espaço até a prova social, já que os botões saíram */}
+          <p className="text-lg md:text-xl text-slate-600 mb-16 max-w-2xl leading-relaxed">
             Elimine a troca de mensagens interminável. Permita que seus clientes agendem sozinhos, 24/7.
           </p>
 
-          {/* --- BOTÕES AJUSTADOS --- */}
-          {/* Removi o 'min-w' para eles não ficarem esticados e reduzi o gap para 3 */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full mb-12">
-            
-            <Button 
-              size="xl" 
-              className="w-full sm:w-auto shadow-md hover:-translate-y-0.5 transition-all bg-slate-900 hover:bg-slate-800"
-            >
-              Começar Agora
-            </Button>
-            
-            <Button 
-              size="xl" 
-              variant="outline"
-              className="w-full sm:w-auto border-2 bg-white text-slate-700 hover:bg-slate-50"
-            >
-              Ver Demonstração
-            </Button>
+          {/* --- BOTÕES FORAM REMOVIDOS AQUI --- */}
 
-          </div>
-
-          {/* Prova Social */}
+          {/* Prova Social (MANTIDA) */}
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm font-medium text-slate-500">
             <div className="flex items-center gap-1.5">
               <span className="text-yellow-400 text-base">★★★★★</span>
