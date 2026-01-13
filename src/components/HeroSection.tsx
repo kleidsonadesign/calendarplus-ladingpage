@@ -5,17 +5,14 @@ export function HeroSection() {
     <section className="relative bg-slate-50 border-b border-slate-200 overflow-hidden pt-20 pb-28 md:pt-32 md:pb-40">
       
       {/* --- EFEITOS DE FUNDO --- */}
-      {/* Grid de pontos técnicos */}
       <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
-      
-      {/* Luz Azul Central (Glow suave) */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-blue-100/40 rounded-full blur-[100px] pointer-events-none" />
 
-      {/* --- CONTEÚDO PRINCIPAL --- */}
+      {/* --- CONTEÚDO --- */}
       <div className="container relative z-10 mx-auto px-4 max-w-5xl">
         <div className="flex flex-col items-center text-center">
           
-          {/* Badge de Integração */}
+          {/* Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-sm mb-6 cursor-default hover:border-blue-300 transition-colors">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
@@ -26,7 +23,7 @@ export function HeroSection() {
             </span>
           </div>
 
-          {/* Título Principal */}
+          {/* Título */}
           <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-slate-900 tracking-tight leading-[1.1]">
             Automatize seus agendamentos no{' '}
             <span className="text-blue-600">
@@ -39,12 +36,13 @@ export function HeroSection() {
             Elimine a troca de mensagens interminável. Permita que seus clientes agendem sozinhos, 24/7.
           </p>
 
-          {/* --- BOTÕES (Usando o novo size="xl" do ui/button.tsx) --- */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full mb-12">
+          {/* --- BOTÕES AJUSTADOS --- */}
+          {/* Removi o 'min-w' para eles não ficarem esticados e reduzi o gap para 3 */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full mb-12">
             
             <Button 
               size="xl" 
-              className="w-full sm:w-auto min-w-[180px] shadow-lg hover:-translate-y-0.5 transition-all bg-slate-900 hover:bg-slate-800"
+              className="w-full sm:w-auto shadow-md hover:-translate-y-0.5 transition-all bg-slate-900 hover:bg-slate-800"
             >
               Começar Agora
             </Button>
@@ -52,15 +50,15 @@ export function HeroSection() {
             <Button 
               size="xl" 
               variant="outline"
-              className="w-full sm:w-auto min-w-[180px] border-2 bg-white text-slate-700 hover:bg-slate-50"
+              className="w-full sm:w-auto border-2 bg-white text-slate-700 hover:bg-slate-50"
             >
               Ver Demonstração
             </Button>
 
           </div>
 
-          {/* Prova Social (Rodapé do Hero) */}
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-medium text-slate-500">
+          {/* Prova Social */}
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm font-medium text-slate-500">
             <div className="flex items-center gap-1.5">
               <span className="text-yellow-400 text-base">★★★★★</span>
               <span>4.9/5 avaliações</span>
