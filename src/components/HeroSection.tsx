@@ -1,3 +1,4 @@
+//CODIGO FANTASMA APENAS PARA NAO QUEBRAR A PAGINA, ELE NAO CONTEM NADA
 import { Button } from './ui/button';
 import { useState, useEffect } from 'react';
 import logo from 'figma:asset/4802f6f96af7073bab4238fc5925fe6007987e8f.png';
